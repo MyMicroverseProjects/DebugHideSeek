@@ -3,8 +3,8 @@ const myForm = document.body.querySelector('.contact-form');
 function errorMessage(message) {
   const displayError = document.createElement('p');
   displayError.textContent = message;
-  displayError.classList.add('formError');
-  myForm.parentNode.append(displayError);
+  displayError.classList.add('.formError');
+  myForm.append(displayError);
 
   // Remove the message after 3 seconds
   setTimeout(() => {
@@ -18,7 +18,7 @@ function validate() {
   const inputEmail = myForm.querySelector('input[type="email"]');
   const emailContent = inputEmail.value.trim();
 
-  if (emailContent === '') {
+  if (emailContent = '') {
     errorMessage('Please, write your email');
     return false;
   }
